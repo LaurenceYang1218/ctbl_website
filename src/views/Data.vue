@@ -6,31 +6,35 @@
     <div class="space"></div>
     <Ranking1 />
     <Table />
+    <Score />
+    <Rebound1 />
   </div>
 
 </template>
 
 <script>
-import Ranking1 from '../components/ranking1/Ranking1.vue';
-import Table from '../components/ranking1/Table.vue';
+import Ranking1 from '../components/ranking1/Ranking1.vue'
+import Table from '../components/ranking1/Table.vue'
+import Score from '../components/ranking1/Score1.vue'
+import Rebound1 from '../components/ranking1/Rebound1.vue'
 
 export default {
-  components: { Ranking1, Table },
+  components: { Ranking1, Table , Score, Rebound1 },
   setup() {
 
-  },
-
+  }
 };
 </script>
 
 <style>
 .data{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #2c2c2c;
   color: white;
   /*text-align: center;*/
 }
+
 #title {
     height: 75px;
     background: linear-gradient( 269.04deg,rgba(159,137,80,0.495) 57.82%, rgba(89,81,61,0) 85.4%) ;
@@ -45,6 +49,7 @@ export default {
 }
 
 .space{
+  /*position: relative;*/
   height:200px;
   width: 100%;
 }

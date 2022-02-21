@@ -35,7 +35,7 @@ export default {
 
 
 #rankbar {
-    height: 75px;
+    position: sticky;
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
