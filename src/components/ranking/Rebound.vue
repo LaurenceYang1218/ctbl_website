@@ -2,14 +2,14 @@
   <div class="rebounding-table">
     <table>
       <thead>
-        <tr><th colspan="1">得分</th></tr>
+        <tr><th colspan="3">籃板</th></tr>
       </thead>
       <tbody>
         <tr v-for="content in contents" :key="content.id">
           <td>{{ content.rank }}</td>
           <td>
-          <p>{{ content.player }}</p>
-          <p>{{ content.departement}}</p>
+            <p>{{ content.player }}</p>
+            <p>{{ content.departement}}</p>
           </td>
           <td>{{ content.rebounding }}</td>
         </tr>
@@ -39,16 +39,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+
 .rebounding-table{
-  position: fixed;
-  top: 250px;
-  right: 2px;
-  width: 35%;
-  height: 540px;
-  margin: 0 10%;
+  position: sticky;
+  /* top: 2000px; */
+  /* left: 700px; */
+  width: 30vw;
+  height: 56vh;
+  margin: 5 10%;
   border-radius: 20px;
-  background-color: #373737;
+  background-color: black;
   overflow-y: scroll; 
   
 }
@@ -66,13 +68,13 @@ export default {
   border-bottom: 1px solid #9F8950;
   font :bold 22px 'Bai Jamjuree';
   position:relative;
-  background: color #2f2f2f;;
+  background: color black;;
 }
 
 .rebounding-table table thead th {
-  text-align: center;
+  padding-left: 20px;
   position: sticky;
-  background-color: #373737;
+  background-color: black;
   top: 0px;
 }
 

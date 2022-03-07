@@ -2,14 +2,14 @@
   <div class="scoring-table">
     <table>
       <thead>
-        <tr><th colspan="1">得分</th></tr>
+        <tr><th colspan="3">得分</th></tr>
       </thead>
       <tbody>
         <tr v-for="content in contents" :key="content.id">
           <td>{{ content.rank }}</td>
           <td>
-          <p>{{ content.player }}</p>
-          <p>{{ content.departement}}</p>
+            <p>{{ content.player }}</p>
+            <p>{{ content.departement}}</p>
           </td>
           <td>{{ content.scoring }}</td>
         </tr>
@@ -41,14 +41,15 @@ export default {
 
 <style>
 .scoring-table{
-  position: fixed;
-  top: 250px;
+  position: sticky;
+  top: 80%;
+  /* top: 60%; */
   left: 0px;
-  width: 35%;
-  height: 540px;
+  width: 30vw;
+  height: 56vh;
   margin: 0 10%;
   border-radius: 20px;
-  background-color: #373737;
+  background-color: black;
   overflow-y: scroll; 
 }
 
@@ -69,9 +70,9 @@ export default {
 }
 
 .scoring-table table thead th {
-  text-align: center;
+  padding-left: 20px;
   position: sticky;
-  background-color: #373737;
+  background-color: black;
   top: 0px;
 }
 

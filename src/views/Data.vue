@@ -3,55 +3,73 @@
     <div id="title">
       <h1>statistic</h1>
     </div>
-    <div class="space"></div>
-    <Ranking1 />
-    <Table />
-    <Score />
-    <Rebound1 />
-  </div>
+    <Ranking />
+    
+    <div class="tables">
+      <RankingTable />
+      <div class = "item">
+        <Score />
+        <Rebound />
+      </div>      
+    </div>
 
+  </div> 
 </template>
 
 <script>
-import Ranking1 from '../components/ranking1/Ranking1.vue'
-import Table from '../components/ranking1/Table.vue'
-import Score from '../components/ranking1/Score1.vue'
-import Rebound1 from '../components/ranking1/Rebound1.vue'
+import Ranking from '../components/ranking/Ranking.vue'
+import RankingTable from '../components/ranking/RankingTable.vue'
+import Score from '../components/ranking/Score.vue'
+import Rebound from '../components/ranking/Rebound.vue'
 
 export default {
-  components: { Ranking1, Table , Score, Rebound1 },
+  components: { Ranking, RankingTable, Score, Rebound },
   setup() {
 
   }
 };
 </script>
 
-<style>
+<style scoped>
 .data{
   width: 100%;
-  height: 100%;
-  background-color: #2c2c2c;
+  height: 200vh;
+  background-color: #2f2f2f;
   color: white;
-  /*text-align: center;*/
 }
 
 #title {
-    height: 75px;
-    background: linear-gradient( 269.04deg,rgba(159,137,80,0.495) 57.82%, rgba(89,81,61,0) 85.4%) ;
-    text-transform: uppercase;
-    display: flex;
-    font:bold 28px 'Bai Jamjuree';
-    letter-spacing: 0.4em;
-}
-
-#title h1{
-  margin-left:3%;
-}
-
-.space{
-  /*position: relative;*/
-  height:200px;
+  position: fixed;
+  top: 100px;
   width: 100%;
+  height: 75px;
+  background: linear-gradient( 269.04deg,rgba(159,137,80,0.495) 57.82%, rgba(89,81,61,0) 85.4%) ;
+  text-transform: uppercase;
+  padding-left: 5%;
+  display: flex;
+  align-items: flex-end;
+  font:bold 0.6em 'Bai Jamjuree';
+  letter-spacing: 0.6em;
 }
+.tables {
+  position: fixed;
+  width: 100%;
+  top: 350px;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.tables::-webkit-scrollbar {
+  display: none;
+}
+
+.item { 
+  width: 80%;
+  margin: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 
 </style>
