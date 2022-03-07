@@ -54,6 +54,7 @@ export default {
 
 #rankbar {
   position: fixed;
+  z-index: 2;
   top: 200px;
   width: 100%;
   height: 100px;

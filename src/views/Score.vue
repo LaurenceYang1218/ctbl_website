@@ -4,16 +4,16 @@
       <h1>score</h1>
     </div>
     <ScoreSelection />
+    <ScoreTable />
   </div>
-  
 </template>
 
 <script>
-import ScoreSelection from "../components/score/ScoreSelection.vue"
+import ScoreSelection from './../components/score/ScoreSelection.vue'
+import ScoreTable from './../components/score/ScoreTable.vue'
 export default {
-  components: { ScoreSelection },
-  setup() {
-
+  components: { ScoreSelection, ScoreTable },
+  setup(){
   }
 }
 </script>
