@@ -54,8 +54,6 @@ export default {
 
 <style>
 .ranking-table {
-  position: fixed;
-  top: 350px;
   width: 80%;
   height: 540px;
   margin: 0 10%;
